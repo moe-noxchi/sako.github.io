@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border box keeps the element locked inside the box and doesnt let it out */
+    scroll-behavior: smooth;
+    /* keeps the scolling smooth */
+
+}
+
+header {
+    background-color: #3d0505;
+    width: 100%;
+    position: fixed;
+    /* it keeps the header following when u scroll down */
+    z-index: 999;
+    /* keeps the header showing when u scroll down so it wont get mixed in other things */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+    text-shadow: -2px -7px 10px black;
+    /* it has the shadow for the text */
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding-left: 30px;
+}
+
+
+.navigation a:hover {
+    color: #ff005c;
+}
+
+.main {
+    padding: 100px 200px;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    align-items: center;
+    background-color: #040202f5;
+    /* color: white; */
+    background: url(images/wallpaperflare.com_wallpaper\ \(2\).jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    background-attachment: fixed;
+    /* keeps the img sticked to its main when u scroll */
+    align-items: center;
+    justify-content: start;
+}
+
+.main h2 {
+    color: white;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.main h2 span {
+    /* span is an inline element so u need to add inline-block so u can use it as u want */
+    display: inline-block;
+    margin-top: 10px;
+    color: #3d0505;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.main h3 {
+    /* we can do margin top or bottom on h3 cuz its blocked element no need to display inline block */
+    color: #000000;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    /* letter spacing gives u spcae between the letters */
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.main-btn {
+    color: white;
+    background-color: #ff005c;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    /* its 15px if u x16 the number above */
+    letter-spacing: 1px;
+    border-radius: 18px;
+    margin-bottom: 40px;
+    transition: 0.7s ease;
+    /* the time that lets the button move */
+}
+
+.main-btn:hover {
+    background-color: #c70048;
+    transform: scale(1.1);
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.7em;
+    padding-right: 30px;
+    padding-left: 10px;
+}
+
+.main-btn, h2, .one-h3, .tracking-in-expand{
+    animation:tracking-in-expand 1s cubic-bezier(.215,.61,.355,1.000) both
+}
+
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: #3d0505;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    /* if u want the cards to be next to each u use row and if u want them down each u use collumn */
+    flex-wrap: wrap;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    /* when u zoom in the webpage wrap would help to leep the cards in their original size if its not for it , it would make them smaller so the look of it would be ugly and we dont want that */
+    /* margin-left: 100px; */
+    /* margin-right: 100px; */
+}
+
+/* .content, .title {
+    background: url(images/wallpaperflare.com_wallpaper\ \(6\).jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+} */
+
+.card {
+    background-color: #eee;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    /* padding makes spaces from itself y3ani makes itself bigger*/
+    margin: 25px;
+    /* margin makes spaces around itself not from itself */
+    transition: 0.7s ease;
+}
+
+.card:hover {
+    background-color: white;
+    transform: scale(1.1);
+    box-shadow: 0 5px 25px #ff005c;
+}
+
+.icon-one {
+    color: orangered;
+    font-size: 8em;
+    text-align: center;
+}
+
+.icon-two {
+    color: #0087ff;
+    font-size: 8em;
+    text-align: center;
+}
+
+.icon-three {
+    color: #cfcf16;
+    font-size: 8em;
+    text-align: center;
+}
+
+.info {
+    text-align: center;
+}
+
+.info h3{
+
+    color: #c70048;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.projects {
+    background: url(images/wallpaperflare.com_wallpaper\ \(3\).jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    /* background-color: #c70048; */
+}
+
+.projects .content {
+    margin-top: 30px;
+
+}
+
+.project-card {
+    background-color: white;
+    border: 1px solid white;
+    /* short hand the px the boldness the color */
+    min-height: 14em;
+    /* means that u need to be at least 14em */
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    /* space between the cards */
+    transition: 0.7s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.1);
+}
+
+.project-card:hover .project-image {
+    opacity: 0.9;
+    /* the whiteness of the img or color it brighteness it*/
+}
+
+
+.project-image img {
+    width: 100%;
+}
+
+.project-info {
+    padding: 1em;
+}
+
+.project-category {
+    font-size: 0.8em;
+    color: #ff005c;
+}
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.more-details {
+    text-decoration: none;
+    color: #ff005c;
+}
+
+.more-details:hover {
+    color: #c70048;
+}
+
+
+/* .contact .icon {
+    font-size: 4.5em;
+}
+
+.contact .info .h2 {
+    color: #000000;
+} */
+
+.icon-phone {
+    color: #3d0505;
+    font-size: 8em;
+    text-align: center;
+}
+
+.icon-email {
+    color: #3d0505;
+    font-size: 8em;
+    text-align: center;
+
+}
+
+.mp {
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.footer {
+    background-color: #000016;
+    color: white;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-title {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.footer-title span {
+    color: #ff005c;
+}
+
+.footer .social-icons a {
+    font-size: 1.3em;
+    padding: 0 12px 0 0; 
+}
+
+@media (max-width:1023px) {
+    /* max width means from 0 to 1023px  */
+    header {
+        padding: 12px 20px;
+    }
+
+    .navigation {
+        padding-left: 10px;
+    }
+    
+    .title {
+        font-size: 1.8em;
+    }
+    
+    section {
+        padding: 80px 20px;
+    }
+
+    .main {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .main-content h2 {
+        font-size: 1em;
+    }
+    
+    .main-content h3 {
+        font-size: 1.6em;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+}
+
+@media (max-width:641px){
+    body {
+        font-size: 12px;
+    }
+
+    .main-content h2 {
+        font-size: 0.8em;
+    }
+
+    .main-content h3 {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width:300px){
+    .body {
+        font-size: 10px;
+    }
+}
